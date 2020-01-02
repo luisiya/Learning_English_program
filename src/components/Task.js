@@ -82,9 +82,10 @@ export const Task = () => {
         setAnswer('');
       } else {
         setTaskText(`${'Нужно что-то ввести.\n'}${textUnit}`);
-
       }
     } else if (btnTitle === tryAgainText) {
+      setShow(false);
+      setShowWord(false);
       window.location.reload();
     } else {
       next();
@@ -92,7 +93,8 @@ export const Task = () => {
   };
 
   const checkKeyPress = (e) => {
-    if (e.charCode === 13) {
+    console.log(e.target.value);
+    if (e.charCode === 13 && e.target.value !== '') {
       taskCheck();
     }
   };
@@ -105,8 +107,8 @@ export const Task = () => {
           <span className={classes.word}>{show ? words[count] : ''}</span>
         </Typography>
       </Paper>
-      <form className={classes.answerWrapper} noValidate autoComplete="off">
-        {show ? <TextField className={classes.answerText} onKeyPress={checkKeyPress} autoFocus onChange={getInputValue} inputRef={textInput} fullWidth id="outlined-basic" label="Ваш ответ" variant="outlined" /> : ''}
+      <form className={classes.answerWrapper} onKeyPress={checkKeyPress} noValidate autoComplete="off">
+        {show ? <TextField className={classes.answerText} autoFocus onChange={getInputValue} inputRef={textInput} fullWidth id="outlined-basic" label="Ваш ответ" variant="outlined" /> : ''}
         <Button className={classes.taskBtn} variant="contained" color="primary" onClick={taskCheck}>{btnTitle}</Button>
       </form>
     </Fragment>

@@ -1,7 +1,13 @@
 .App {
+    background-image:url(./images/abc.png);
     text-align: center;
     max-width: 960px;
     margin: 8% auto;
+    height: 499px;
+    background-size: 881px;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 145px;
 }
 
 
