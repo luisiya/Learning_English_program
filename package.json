@@ -10,6 +10,9 @@
   "keywords": [],
   "author": "Luisi Kravchenko",
   "license": "ISC",
+  "engines": {
+    "node": "12.x"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/plugin-transform-runtime": "^7.7.6",
