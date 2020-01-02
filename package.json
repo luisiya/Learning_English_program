@@ -4,8 +4,7 @@
   "description": "Learning English program",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open",
     "build": "webpack --mode production"
   },
   "keywords": [],
