@@ -1,11 +1,21 @@
 ﻿const HtmlWebPackPlugin = require('html-webpack-plugin');
-const isDevelopment = process.env.NODE_ENV !== 'production'
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+const isDevelopment = process.env.NODE_ENV !== 'production';
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   output: {
     filename: isDevelopment ? '[name].js' : '[name].[hash].js',
+  },
+  devServer: {
+    compress: true,
+    // Enable hot reloading
+    hot: true,
+    port: process.env.PORT || '3001',
+    // Public path is root of content base
+    publicPath: '/',
+
   },
   module: {
     rules: [
