@@ -8,7 +8,7 @@ import { showUnits } from '../actions/showUnits';
 
 const useStyles = makeStyles(() => ({
   taskBtn: {
-    width: '30%',
+    width: '26%',
     margin: '0 auto',
     color: '#009688',
     '@media (max-width:479px)': {

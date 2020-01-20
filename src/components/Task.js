@@ -93,7 +93,6 @@ export const Task = () => {
   };
 
   const checkKeyPress = (e) => {
-    console.log(e.target.value);
     if (e.charCode === 13 && e.target.value !== '') {
       taskCheck();
     }

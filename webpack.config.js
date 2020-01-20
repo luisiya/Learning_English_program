@@ -12,7 +12,7 @@ module.exports = {
     compress: true,
     // Enable hot reloading
     hot: true,
-    port: process.env.PORT || '3001',
+    port: process.env.PORT || '3003',
     // Public path is root of content base
     publicPath: '/',
 
